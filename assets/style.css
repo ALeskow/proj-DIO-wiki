@@ -1,0 +1,99 @@
+ body, html {
+        background-color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(60, 60, 60);
+    }
+    h2, p, figure {
+        margin-bottom: 2.5rem;
+    }
+    ul {list-style: none; padding-left: 5px;}
+    a {color: rgb(0, 109, 251); text-decoration: none;}
+    a:hover {color:darkblue; text-decoration: underline;}
+    .bar {
+        background-color: #e9e9e9;
+        padding: 15px;
+        border-top: solid 1px #7f7f7f;
+        border-bottom: solid 1px #7f7f7f;
+        border-radius: 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .bar::before, .bar::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 2px;
+        background-color: #7f7f7f;
+        z-index: 1;
+    }
+    .bar::before {
+        left: 15px;
+    }
+    .bar::after {
+        right: 15px;
+    }
+    .sidebar iframe {
+        max-width: 100%;
+        height: auto;
+        border: solid #7f7f7f 5px;
+        border-radius: 5px;
+        padding: 1px;
+    }
+    .main {
+        text-align: left;
+    }
+    .main img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .content {
+        max-width: 1440px;
+        margin: auto;
+        display: grid;
+        gap: 3rem;
+        grid-template-areas: "sidebar main anchors";
+        grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .footer {
+        width: 100vw;
+        border-top: 2px solid #7f7f7f;
+        min-height: 100px;
+        padding: 15px;
+        text-align: center;
+        margin-left: calc(-50vw + 50%);
+        position: relative;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .anchors {
+        border: solid 1px #7f7f7f;
+        border-radius: 5px;
+        background-color: #e9e9e9;
+        padding-left: 15px;
+        position: fixed;
+        top: 200px;
+        right: 1rem;
+        width: 15rem;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .anchors a{color: rgb(27, 98, 190);}
+    .anchors a:hover {color:darkblue; text-decoration: underline;}
+    figure {
+        width: 300px;
+        border: 5px solid #f9f9fb;
+        text-align: center;
+        margin: 0 auto;
+    }
+     #referencias {
+        font-size: small;
+    }
